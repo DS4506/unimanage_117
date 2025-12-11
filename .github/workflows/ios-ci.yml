@@ -24,5 +24,10 @@ jobs:
       - name: List Xcode schemes (debugging help)
         run: xcodebuild -list -project UniManage.xcodeproj
 
-      - name: Build and run tests on iOS simulator
-        run: xcodebuild -project UniManage.xcodeproj -scheme UniManage -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=latest,name=iPhone 14' clean test
+      - name: Build and Test on Generic iOS Simulator
+        run: xcodebuild \
+            -project UniManage.xcodeproj \
+            -scheme UniManage \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=Any iOS Simulator Device' \
+            clean test
