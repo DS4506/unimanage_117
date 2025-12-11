@@ -26,9 +26,4 @@ jobs:
           xcodebuild -list -project UniManage.xcodeproj
 
       - name: Build and run tests on iOS simulator
-        run: |
-          xcodebuild \
-            -project UniManage.xcodeproj \
-            -scheme UniManage \
-            -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \ clean test      
+        run: xcodebuild -project UniManage.xcodeproj -scheme UniManage -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 16' clean test
