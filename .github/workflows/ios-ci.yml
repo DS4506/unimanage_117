@@ -1,0 +1,29 @@
+name: iOS UniManage CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest
+
+      - name: List Xcode schemes (debugging help)
+        run: |
+          xcodebuild -list -project UniManage.xcodeproj
+
+      - name: Build and run tests on iOS simulator
+        run: xcodebuild -project UniManage.xcodeproj -scheme UniManage -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 16' clean test
