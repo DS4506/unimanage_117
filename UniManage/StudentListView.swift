@@ -1,8 +1,3 @@
-//
-//  StudentListView.swift
-//  UniManage
-//
-//
 
 import SwiftUI
 

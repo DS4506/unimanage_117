@@ -1,8 +1,3 @@
-//
-//  SettingsView.swift
-//  UniManage
-//
-//
 
 import SwiftUI
 

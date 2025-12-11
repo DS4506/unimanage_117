@@ -1,9 +1,4 @@
-//
-//  UniManageUITestsLaunchTests.swift
-//  UniManageUITests
-//
-//  Created by Gabriela Sanchez on 06/12/25.
-//
+
 
 import XCTest
 

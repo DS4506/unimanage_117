@@ -1,7 +1,3 @@
-//
-//  StudentViewModel.swift
-//  UniManage
-//
 
 import Combine
 import SwiftUI
